@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Matthieu Dorier's Website</title>
+  <meta name="description" content="">
+
+  <link rel="canonical" href="/">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/resumecard.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link href="//cdn.rawgit.com/noelboss/featherlight/1.4.1/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+  <link rel="icon" type="image/png" href="/assets/img/avatar.png">
+
+  <!-- Google fonts -->
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300' type='text/css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' type='text/css'>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="//cdn.rawgit.com/noelboss/featherlight/1.4.1/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+
+  <body>
+
+    <div class="header">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-sm-4">
+                <img src="/assets/img/avatar.png" title="Matthieu Dorier" alt="Matthieu Dorier">
+                <h2>Matthieu Dorier</h2>
+                <p>Postdoctoral Appointee</p>
+                <p>Argonne National Laboratory</p>
+		<p><i class="fa fa-envelope-o fa-fw"></i> mdorier@anl.gov </p>
+                <div class="clearfix"></div>
+            </div>
+            <div class="col-sm-4 visible-md-block visible-lg-block visible-sm-block">
+		<h2>&nbsp</h2>
+		<p><i class="fa fa-google fa-fw"></i>
+			<a href="https://scholar.google.fr/citations?user=n6vCaDAAAAAJ" target="_blank"> Google scholar </a></p>
+		<p><i class="fa fa-graduation-cap fa-fw"></i>
+			<a href="https://www.researchgate.net/profile/Matthieu_Dorier" target="_blank"> Researchgate </a></p>
+                <p><i class="fa fa-linkedin-square fa-fw"></i>
+			<a href="//linkedin.com/in/matthieu-dorier-a542bb43" target="_blank"> LinkedIn </a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="menu">
+    <div class="container-fluid">
+	
+            
+	        <a href="index.html"><button type="button" class="btn btn-primary">Research</button></a>
+	    
+	
+            
+	        <a href="resume.html"><button type="button" class="btn btn-info">Resume</button></a>
+	    
+	
+            
+	        <a href="publications.html"><button type="button" class="btn btn-info">Publications</button></a>
+	    
+	
+            
+	        <a href="software.html"><button type="button" class="btn btn-info">Software</button></a>
+	    
+	
+            
+	        <a href="awards.html"><button type="button" class="btn btn-info">Awards</button></a>
+	    
+	
+    </div>
+</div>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="container-fluid">
+    <div class="row-fluid">
+        <div class="col-md-8">
+	<h3 class="title with-icon"><span class="fa fa-graduation-cap cat-title"></span>Research interests</h3>
+                <div class="grid-block">
+			
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/IBM_Blue_Gene_P_supercomputer.jpg" width="450" align="right" /></p>
+
+<p>My research interests revolve around data movements in high-performance computing, more specifically I/O, storage, in situ analysis and visualization, and communications algorithms. In the past, I have also played with cloud storage, in particular in the context of MapReduce applications.</p>
+
+<h4 id="inputoutput-for-hpc-simulations"><strong>Input/Output for HPC simulations</strong></h4>
+
+<p>In the past few years, Input/Output (I/O) have become a major bottleneck in large-scale HPC applications. The increasing gap between the computation performance, soon reaching the Exascale, and the performance of storage systems, puts more and more pressure on parallel file systems. This pressure leads to increased run time, variability, and energy consumption. I this research direction, I propose new approaches to I/O, in particular based on the use of dedicated cores or dedicated nodes. I have developed Damaris, a middleware for efficient I/O for HPC simulations. Damaris was at the core of my PhD thesis. It is now supported by an Inria ADT in the KerData team of Inria Rennes.</p>
+
+<h4 id="in-situ-analysis-and-visualization"><strong>In situ analysis and visualization</strong></h4>
+
+<p>In situ analysis and visualization is a new paradigm that proposes to couple running simulations with visualization and analysis tools. This enable direct access to the simulation’s data while it is being produced, without the need for transiting through a parallel file system. My work in this context led me, in particular, to enable in situ visualization in the Damaris middleware through a direct connection with the VisIt software for parallel visualization. Since 2015, Damaris is available within the VisIt package as an interface to simulations.</p>
+
+<h4 id="modeling-and-prediction-of-io-activity"><strong>Modeling and prediction of I/O activity</strong></h4>
+
+<p>Parallel storage systems consist of many components (disks, servers, networks, etc.) that have to take decisions when receving requests from HPC applications. These decisions can be optimized by building a model of the application’s behavior and predict future requests. To this end, I proposed the Omnisc’IO approach, which is based on formal grammars to model and predict the I/O behavior of HPC applications as they run.</p>
+
+<h4 id="collective-algorithms-in-novel-network-topologies"><strong>Collective algorithms in novel network topologies</strong></h4>
+
+<p>Post-petascale machines feature new network topologies such as Dragonfly. In this context, it becomes necessary to redesign collective algorithms such as broadcast, allgather, or reduce, in order to make the most efficient use of the topology. My work led me to propose new collective algorithms specifically designed for the Dragonfly network topology and to evaluate them using event-driven simulations.</p>
+
+                </div>
+	</div>
+	<div class="col-md-4">
+	<h3 class="title with-icon"><span class="fa fa-users cat-title"></span>Collaborations</h3>
+		<div class="grid-block">
+                    <ul class="list-unstyled list-skills">
+                        
+                            <li>
+                                <h5><b>Joint Laboratory for Extreme-Scale Computing (JLESC)</b></h5>
+                                <i class="fa fa-calendar"></i> (2009 - Present) <br>
+                                <i class="fa fa-users"></i>  Inria, ANL, UIUC, JSC, BSC, RIKEN-AICS
+                                <p>
+				  <a href="https://jlesc.github.io/" target="_blank"><span class="label label-bibtex">URL</span></a> &nbsp;
+                                </p>
+                                <div>The purpose of the Joint Laboratory for Extreme Scale Computing (JLESC) is to be an international, virtual organization whose goal is to enhance the ability of member organizations and investigators to make the bridge between Petascale and Extreme computing.</div>
+                            </li>
+                            <hr>
+                        
+                            <li>
+                                <h5><b>Data@Exascale associated team</b></h5>
+                                <i class="fa fa-calendar"></i> (2013 - Present) <br>
+                                <i class="fa fa-users"></i>  KerData (Inria Rennes, IRISA), ANL, UIUC
+                                <p>
+				  <a href="http://www.irisa.fr/kerdata/data-at-exascale/doku.php" target="_blank"><span class="label label-bibtex">URL</span></a> &nbsp;
+                                </p>
+                                <div>The team addresses the area of large scale data management for post-petascale supercomputers and for clouds. We aim to investigate several open issues related to storage and I/O in HPC, but also in situ data visualization and analysis from large scale simulations.</div>
+                            </li>
+                            <hr>
+                        
+                            <li>
+                                <h5><b>Compute on Data Path</b></h5>
+                                <i class="fa fa-calendar"></i> (2015 - Present) <br>
+                                <i class="fa fa-users"></i>  Texas Tech, Northwestern University, University of Houston, Oakland University, NSF
+                                <p>
+				  <a href="http://discl.cs.ttu.edu/cdp/doku.php" target="_blank"><span class="label label-bibtex">URL</span></a> &nbsp;
+                                </p>
+                                <div>This project combats the increasingly critical data movement challenge in high performance computing. This project studies the feasibility of a new Compute on Data Path methodology that expects to improve the performance and energy efficiency for high performance computing.</div>
+                            </li>
+                            <hr>
+                        
+			
+                    </ul>
+                </div>
+        </div>
+    </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="footer">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-md-12">
+                Copyright &copy; 2016 Matthieu Dorier - All rights reserved.
+            </div>
+        </div>
+    </div>
+</div>
+
+  </body>
+
+</html>
